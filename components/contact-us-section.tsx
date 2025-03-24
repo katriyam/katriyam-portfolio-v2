@@ -5,6 +5,7 @@ import { SplineScene } from "@/components/splite";
 import { Card } from "@/components/ui/card";
 import { Spotlight } from "@/components/spotlight";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function ContactUs() {
   return (
@@ -23,8 +24,11 @@ export function ContactUs() {
               support and seamless solutions. We&apos;re here to help — reach
               out today!
             </p>
-            <Button className="w-fit mt-4 gap-2 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 cursor-pointer">
-              Contact Us <Mail />
+            <Button
+              asChild
+              className="w-fit mt-4 gap-2 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 cursor-pointer"
+            >
+              <Link href="#footer">Contact Us <Mail /></Link>
             </Button>
           </div>
 

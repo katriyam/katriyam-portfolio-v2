@@ -12,7 +12,10 @@ import { ThemeToggle } from "@/components/theme-toggle";
 
 export function Footer() {
   return (
-    <footer className="relative border-t bg-background text-foreground transition-colors duration-300">
+    <footer
+      id="footer"
+      className="relative border-t bg-background text-foreground transition-colors duration-300"
+    >
       <div className="container mx-auto px-4 py-12 md:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* SECTION 01 */}
@@ -85,7 +88,7 @@ export function Footer() {
               <p>Agrabad Commercial Area,</p>
               <p>Chattogram, Bangladesh.</p>
               <p>Phone: (+82) 10-2180-1070</p>
-              <p>Phone: (+880) 1400802622</p>
+              <p>Phone: (+880) 1750050511</p>
               <p>Email: contact@katriyam.com</p>
             </address>
           </div>
@@ -116,7 +119,7 @@ export function Footer() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Link href="#">
+                    <Link href="https://x.com/teamkatriyam" target="_blank">
                       <Button
                         variant="outline"
                         size="icon"
@@ -135,7 +138,10 @@ export function Footer() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Link href="#">
+                    <Link
+                      href="https://www.instagram.com/katriyam.official"
+                      target="_blank"
+                    >
                       <Button
                         variant="outline"
                         size="icon"
