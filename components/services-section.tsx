@@ -1,66 +1,82 @@
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils'
 import {
-  IconAutomation,
+  IconPalette,
   IconBook2,
   IconBrandOpenai,
   IconBrowserCheck,
-  IconDatabase,
-  IconPalette,
-  IconScript,
+  IconBrush,
+  IconDeviceTablet,
   IconTerminal2,
-} from "@tabler/icons-react";
+  IconScript,
+  IconDatabase,
+  IconSettingsAutomation,
+  IconCurrencyBitcoin,
+  IconFileBitcoin,
+} from '@tabler/icons-react'
 
 export function Services() {
   const features = [
     {
-      title: "Web Development",
-      description:
-        "Develop responsive, scalable, and dynamic websites for businesses.",
+      title: 'Web Development',
+      description: 'Custom websites built for performance and scalability.',
       icon: <IconTerminal2 />,
     },
     {
-      title: "Website Scraping",
-      description:
-        "Extract, process, and organize website data efficiently and accurately.",
-      icon: <IconScript />,
+      title: 'Android/iOS App Development',
+      description: 'Cross-platform mobile apps with native performance.',
+      icon: <IconDeviceTablet />,
     },
     {
-      title: "Web Data Automation",
-      description:
-        "Automate web-based tasks for seamless data collection processes.",
-      icon: <IconAutomation />,
-    },
-    {
-      title: "Database Management",
-      description:
-        "Design, maintain, and optimize databases for efficient data handling.",
-      icon: <IconDatabase />,
-    },
-    {
-      title: "Graphic Designing",
-      description:
-        "Create visually appealing graphics, logos, and branding materials.",
+      title: 'UI/UX Design',
+      description: 'Intuitive, user-focused interfaces and experiences.',
       icon: <IconPalette />,
     },
     {
-      title: "SEO & Digital Marketing",
-      description:
-        "Improve online presence and boost search engine rankings effectively.",
-      icon: <IconBrowserCheck />,
+      title: 'Graphic Design',
+      description: 'Creative visuals for branding and marketing.',
+      icon: <IconBrush />,
     },
     {
-      title: "AI-Based Services",
-      description:
-        "Implement AI-powered solutions for automation and data analysis.",
+      title: 'AI-Based Services',
+      description: 'AI chatbots, vision tools, automation solutions.',
       icon: <IconBrandOpenai />,
     },
     {
-      title: "Online Book Publishing & Editing",
-      description:
-        "Assist in publishing, editing, and designing books globally.",
+      title: 'SEO & Digital Marketing',
+      description: 'Grow online presence through SEO and ads.',
+      icon: <IconBrowserCheck />,
+    },
+    {
+      title: 'Online Book Publishing & Editing',
+      description: 'Edit, format, illustrate, and publish books.',
       icon: <IconBook2 />,
     },
-  ];
+    {
+      title: 'Web Crawling & Scraping',
+      description: 'Extract structured data from any website.',
+      icon: <IconScript />,
+    },
+    {
+      title: 'Database Management',
+      description: 'Secure, optimized database setup and maintenance.',
+      icon: <IconDatabase />,
+    },
+    {
+      title: 'Web Data Automation',
+      description: 'Automate workflows with intelligent data pipelines.',
+      icon: <IconSettingsAutomation />,
+    },
+    {
+      title: 'Blockchain Consultation',
+      description: 'Strategy and solutions for blockchain adoption.',
+      icon: <IconCurrencyBitcoin />,
+    },
+    {
+      title: 'Smart Contract Development',
+      description: 'Secure, efficient contracts on major blockchains.',
+      icon: <IconFileBitcoin />,
+    },
+  ]
 
   return (
     <div
@@ -86,7 +102,7 @@ export function Services() {
         ))}
       </div>
     </div>
-  );
+  )
 }
 
 const Feature = ({
@@ -95,17 +111,17 @@ const Feature = ({
   icon,
   index,
 }: {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  index: number;
+  title: string
+  description: string
+  icon: React.ReactNode
+  index: number
 }) => {
   return (
     <div
       className={cn(
-        "flex flex-col lg:border-r  py-10 relative group/feature dark:border-neutral-800",
-        (index === 0 || index === 4) && "lg:border-l dark:border-neutral-800",
-        index < 4 && "lg:border-b dark:border-neutral-800"
+        'flex flex-col lg:border-r  py-10 relative group/feature dark:border-neutral-800',
+        (index === 0 || index === 4) && 'lg:border-l dark:border-neutral-800',
+        index < 4 && 'lg:border-b dark:border-neutral-800'
       )}
     >
       {index < 4 && (
@@ -127,5 +143,5 @@ const Feature = ({
         {description}
       </p>
     </div>
-  );
-};
+  )
+}
