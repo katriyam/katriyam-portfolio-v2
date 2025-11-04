@@ -10,7 +10,7 @@ export default function Component() {
       imageUrl: '/TEAM-MEMBER-1.webp',
       name: 'Tabassum N. Haque',
       fallbackName: 'TH',
-      designation: 'Co-Founder',
+      designation: 'Co-Founder & Managing Director',
       description:
         '8+ yrs in Blockchain, IT strategic planner, Project Manager, Blockchain consultant, AI, Metaverse enthusiast The persue of innovation never stops. stay curious, stay inspired!',
     },
@@ -19,7 +19,7 @@ export default function Component() {
       imageUrl: '/TEAM-MEMBER-2.jpg',
       name: 'Rafiqur Rahman Priyam',
       fallbackName: 'RR',
-      designation: 'Co-Founder',
+      designation: 'Co-Founder & CEO',
       description:
         'Empowering Voices: Publisher at Rongon Publications | Transforming Digital Landscape: CEO & Co-Founder, Katriyam',
     },
@@ -171,7 +171,7 @@ export default function Component() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 justify-center mt-12">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 items-start justify-center mt-12">
             {TEAM_MEMBERS.map((member) => (
               <MemberDetails key={member.id} {...member} />
             ))}
@@ -208,7 +208,7 @@ function MemberDetails({
       </Avatar>
       <div className="space-y-1 text-center">
         <h3 className="text-lg font-semibold">{name}</h3>
-        <p className="text-sm text-muted-foreground">{designation}</p>
+        <p className="text-sm font-medium text-muted-foreground mb-2">{designation}</p>
         <p className="text-sm text-muted-foreground max-w-96">{description}</p>
       </div>
     </div>
