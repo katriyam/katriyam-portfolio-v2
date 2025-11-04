@@ -1,38 +1,38 @@
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { CheckIcon, InfoIcon } from "lucide-react";
-import Image from "next/image";
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
+import { Badge } from '@/components/ui/badge'
+import { CheckIcon, InfoIcon } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Component() {
   const TEAM_MEMBERS = [
     {
       id: 1,
-      imageUrl: "/placeholder.png",
-      name: "Tabassum N. Haque",
-      fallbackName: "TH",
-      designation: "Co-Founder",
+      imageUrl: '/TEAM-MEMBER-1.webp',
+      name: 'Tabassum N. Haque',
+      fallbackName: 'TH',
+      designation: 'Co-Founder',
       description:
-        "8+ yrs in Blockchain, IT strategic planner, Project Manager, Blockchain consultant, AI, Metaverse enthusiast The persue of innovation never stops. stay curious, stay inspired!",
+        '8+ yrs in Blockchain, IT strategic planner, Project Manager, Blockchain consultant, AI, Metaverse enthusiast The persue of innovation never stops. stay curious, stay inspired!',
     },
     {
       id: 2,
-      imageUrl: "/placeholder.png",
-      name: "Rafiqur Rahman Priyam",
-      fallbackName: "RR",
-      designation: "Co-Founder",
+      imageUrl: '/TEAM-MEMBER-2.jpg',
+      name: 'Rafiqur Rahman Priyam',
+      fallbackName: 'RR',
+      designation: 'Co-Founder',
       description:
-        "Empowering Voices: Publisher at Rongon Publications | Transforming Digital Landscape: CEO & Co-Founder, Katriyam",
+        'Empowering Voices: Publisher at Rongon Publications | Transforming Digital Landscape: CEO & Co-Founder, Katriyam',
     },
     {
       id: 3,
-      imageUrl: "/placeholder.png",
-      name: "Md Ahnaf Abir",
-      fallbackName: "AA",
-      designation: "Software Engineer",
+      imageUrl: '/TEAM-MEMBER-3.jpg',
+      name: 'Md Ahnaf Abir',
+      fallbackName: 'AA',
+      designation: 'Software Engineer',
       description:
-        "Software Engineer specializing in designing, developing, and optimizing scalable, efficient, and user-friendly software solutions.",
+        'Software Engineer specializing in designing, developing, and optimizing scalable, efficient, and user-friendly software solutions.',
     },
-  ];
+  ]
 
   return (
     <div>
@@ -61,7 +61,7 @@ export default function Component() {
               src="/our-mission-thumbnail.jpg"
               alt="Katriyam Mission"
               className="max-w-[200px] sm:max-w-[300px] lg:max-w-[400px]"
-              style={{ aspectRatio: "300/300", objectFit: "cover" }}
+              style={{ aspectRatio: '300/300', objectFit: 'cover' }}
             />
           </div>
 
@@ -152,7 +152,7 @@ export default function Component() {
               src="/our-history-thumbnail.jpg"
               alt="Katriyam History"
               className="max-w-[200px] sm:max-w-[300px] lg:max-w-[400px]"
-              style={{ aspectRatio: "300/300", objectFit: "cover" }}
+              style={{ aspectRatio: '300/300', objectFit: 'cover' }}
             />
           </div>
         </div>
@@ -179,16 +179,16 @@ export default function Component() {
         </div>
       </section>
     </div>
-  );
+  )
 }
 
 interface MemberDetails {
-  id: number;
-  imageUrl: string;
-  name: string;
-  fallbackName: string;
-  designation: string;
-  description: string;
+  id: number
+  imageUrl: string
+  name: string
+  fallbackName: string
+  designation: string
+  description: string
 }
 
 function MemberDetails({
@@ -200,7 +200,7 @@ function MemberDetails({
 }: MemberDetails) {
   return (
     <div className="flex flex-col items-center justify-center space-y-4">
-      <Avatar>
+      <Avatar className="size-20">
         <AvatarImage src={imageUrl} />
         <AvatarFallback className="bg-primary/20">
           {fallbackName}
@@ -212,5 +212,5 @@ function MemberDetails({
         <p className="text-sm text-muted-foreground max-w-96">{description}</p>
       </div>
     </div>
-  );
+  )
 }
