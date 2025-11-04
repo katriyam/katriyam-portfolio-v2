@@ -25,7 +25,7 @@ export default function Component() {
     },
     {
       id: 3,
-      imageUrl: '/TEAM-MEMBER-3.jpg',
+      imageUrl: '/TEAM-MEMBER-3.JPG',
       name: 'Md Ahnaf Abir',
       fallbackName: 'AA',
       designation: 'Software Engineer',
