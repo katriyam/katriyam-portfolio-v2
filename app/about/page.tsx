@@ -1,6 +1,6 @@
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
-import { CheckIcon, InfoIcon } from 'lucide-react'
+import { CheckIcon } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Component() {
@@ -39,7 +39,6 @@ export default function Component() {
       <section className="bg-muted">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 py-40">
           <div className="text-center space-y-3">
-            <InfoIcon className="h-12 w-12 mx-auto" />
             <h1 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
               About Katriyam.
             </h1>
@@ -208,7 +207,9 @@ function MemberDetails({
       </Avatar>
       <div className="space-y-1 text-center">
         <h3 className="text-lg font-semibold">{name}</h3>
-        <p className="text-sm font-medium text-muted-foreground mb-2">{designation}</p>
+        <p className="text-sm font-medium text-muted-foreground mb-2">
+          {designation}
+        </p>
         <p className="text-sm text-muted-foreground max-w-96">{description}</p>
       </div>
     </div>
