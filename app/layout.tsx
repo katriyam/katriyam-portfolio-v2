@@ -1,18 +1,16 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import { NavigationMenu } from "@/components/nav-menu";
-import { Footer } from "@/components/footer-section";
+import type { Metadata } from 'next'
+import './globals.css'
+import { ThemeProvider } from '@/components/theme-provider'
 
 export const metadata: Metadata = {
-  title: "Katriyam",
-  description: "Grow your business with Katriyam",
-};
+  title: 'Katriyam',
+  description: 'Grow your business with Katriyam',
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -23,11 +21,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <NavigationMenu />
+          {/* <NavigationMenu /> */}
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
