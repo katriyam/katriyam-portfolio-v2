@@ -1,5 +1,6 @@
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
+import { cn } from '@/lib/utils'
 import { CheckIcon } from 'lucide-react'
 import Image from 'next/image'
 
@@ -13,6 +14,7 @@ export default function Component() {
       designation: 'Co-Founder & CEO',
       description:
         '8+ yrs in Blockchain, IT strategic planner, Project Manager, Blockchain consultant, AI, Metaverse enthusiast The persue of innovation never stops. stay curious, stay inspired!',
+      className: 'lg:col-span-3',
     },
     {
       id: 2,
@@ -22,6 +24,15 @@ export default function Component() {
       designation: 'Co-Founder & Managing Director',
       description:
         'Empowering Voices: Publisher at Rongon Publications | Transforming Digital Landscape: Managing Director & Co-Founder, Katriyam',
+    },
+    {
+      id: 4,
+      imageUrl: '/TEAM-MEMBER-4.JPG',
+      name: 'Monzoor Morshed Mahmud',
+      fallbackName: 'MM',
+      designation: 'CTO',
+      description:
+        '15+ years engineering veteran whose system design and AI-augmented development pipelines have been trusted to power enterprise-scale technical roadmap.',
     },
     {
       id: 3,
@@ -170,7 +181,7 @@ export default function Component() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 items-start justify-center mt-12">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 items-start justify-center mt-12">
             {TEAM_MEMBERS.map((member) => (
               <MemberDetails key={member.id} {...member} />
             ))}
@@ -185,6 +196,7 @@ interface MemberDetails {
   id: number
   imageUrl: string
   name: string
+  className?: string
   fallbackName: string
   designation: string
   description: string
@@ -193,12 +205,18 @@ interface MemberDetails {
 function MemberDetails({
   name,
   imageUrl,
+  className,
   designation,
   description,
   fallbackName,
 }: MemberDetails) {
   return (
-    <div className="flex flex-col items-center justify-center space-y-4">
+    <div
+      className={cn(
+        'flex flex-col items-center justify-center space-y-4',
+        className,
+      )}
+    >
       <Avatar className="size-20">
         <AvatarImage src={imageUrl} />
         <AvatarFallback className="bg-primary/20">
