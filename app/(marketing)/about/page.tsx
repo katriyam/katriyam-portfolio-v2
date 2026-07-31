@@ -27,7 +27,7 @@ export default function Component() {
     },
     {
       id: 4,
-      imageUrl: '/TEAM-MEMBER-4.JPG',
+      imageUrl: '/TEAM-MEMBER-4.jpg',
       name: 'Monzoor Morshed Mahmud',
       fallbackName: 'MM',
       designation: 'CTO',
