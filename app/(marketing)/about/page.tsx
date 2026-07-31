@@ -10,7 +10,7 @@ export default function Component() {
       imageUrl: '/TEAM-MEMBER-1.webp',
       name: 'Tabassum N. Haque',
       fallbackName: 'TH',
-      designation: 'Co-Founder & Managing Director',
+      designation: 'Co-Founder & CEO',
       description:
         '8+ yrs in Blockchain, IT strategic planner, Project Manager, Blockchain consultant, AI, Metaverse enthusiast The persue of innovation never stops. stay curious, stay inspired!',
     },
@@ -19,9 +19,9 @@ export default function Component() {
       imageUrl: '/TEAM-MEMBER-2.jpg',
       name: 'Rafiqur Rahman Priyam',
       fallbackName: 'RR',
-      designation: 'Co-Founder & CEO',
+      designation: 'Co-Founder & Managing Director',
       description:
-        'Empowering Voices: Publisher at Rongon Publications | Transforming Digital Landscape: CEO & Co-Founder, Katriyam',
+        'Empowering Voices: Publisher at Rongon Publications | Transforming Digital Landscape: Managing Director & Co-Founder, Katriyam',
     },
     {
       id: 3,
